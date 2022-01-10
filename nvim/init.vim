@@ -1,0 +1,61 @@
+call plug#begin()
+
+Plug 'tpope/vim-commentary'
+Plug 'sheerun/vim-polyglot'
+Plug 'chrisbra/colorizer'
+Plug 'Kjwon15/vim-transparent'
+Plug 'frazrepo/vim-rainbow'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'preservim/nerdtree'
+
+call plug#end()
+
+" Just normal things to use :)
+
+set termguicolors
+colorscheme dracula
+
+syntax on
+set nocompatible
+set guicursor=
+set noerrorbells
+set hidden
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set number
+set relativenumber
+set ignorecase
+set smartcase
+set noswapfile
+set nobackup
+set incsearch
+set scrolloff=15
+set splitbelow
+set splitright
+
+" Normal remaps
+nnoremap <silent> <c-k> :wincmd k<CR>
+nnoremap <silent> <c-j> :wincmd j<CR>
+nnoremap <silent> <c-h> :wincmd h<CR>
+nnoremap <silent> <c-l> :wincmd l<CR>
+
+nnoremap <silent> <c-n> :noh<CR>
+
+" Split resizing
+nnoremap <silent> <c-u> :vertical resize +8<CR>
+nnoremap <silent> <c-i> :vertical resize -8<CR>
+nnoremap <silent> <c-o> :resize +3<CR>
+nnoremap <silent> <c-p> :resize -3<CR>
+
+" NERDTree Remaps
+nnoremap <silent> <C-q> :NERDTreeToggle<CR>
+
+" For rnvimr
+let g:rnvimr_ex_enable = 1
+
+" For vim-rainbow
+let g:rainbow_active = 1
+
+let g:rainbow_guifgs = ['#caa9fa', '#50fa7b', '#ff6e67', '#8be9fd']
