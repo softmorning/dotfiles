@@ -52,9 +52,6 @@ nnoremap <silent> <c-p> :resize -3<CR>
 " NERDTree Remaps
 nnoremap <silent> <C-q> :NERDTreeToggle<CR>
 
-" For rnvimr
-let g:rnvimr_ex_enable = 1
-
 " For vim-rainbow
 let g:rainbow_active = 1
 
