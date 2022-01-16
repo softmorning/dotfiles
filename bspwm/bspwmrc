@@ -4,9 +4,9 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 xrandr --output DP-2 --mode 1920x1080 --rate 144.00 &
 picom &
-feh --bg-fill --no-fehbg ~/Pictures/wallpapers/0322.png &
+feh --bg-fill --no-fehbg ~/Pictures/wallpapers/0324.png &
+xset s off -dpms &
 setxkbmap -option caps:escape &
-
 
 # Workspaces #
 bspc monitor DP-2 -d I II III IV V 

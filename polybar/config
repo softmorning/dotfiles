@@ -15,38 +15,34 @@
 ;   The README contains a lot of information
 ;
 ;==========================================================
+[scripts]
+firefox_opener = ~/.config/polybar/scripts/firefox_opener.sh
+
 
 [colors]
 background = #282a36
-background-alt = #373737
-foreground = #50fa7b 
-foreground-alt = #f1fa8c
-; alert = #ffffff
+background-alt = #333333
+foreground = #f8f8f2
+foreground-alt = #f4f99d
+alert = #ff5555
+
+
 [bar/bspwm]
 wm-name = bspwm
-width =  10%
+width =  12%
 height = 30
 fixed-center = false
 bottom = false
 offset-x = 1.5%
-offset-y = 1.5%
+offset-y = 2.75%
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 0
-line-color = #f00
-
 border-size = 3
 border-color = #caa9fa
 
-padding-left = 3
-padding-right = 6
-
-module-margin-left = 4
-module-margin-right = 4
-
-font-0 = "UbuntuMono;size=12;3"
+font-0 = "ApercuMono:size=12;3"
 
 modules-center = bspwm
 
@@ -55,21 +51,26 @@ wm-restack = bspwm
 cursor-click = pointer
 cursor-scroll = ns-resize
 
+
 [bar/bspwm-2]
-width = 15%
-offset-x = 83.5%
+font-0 = "ApercuMono:size=13;3"
+width = 10%
+offset-x = 45.0%
 inherit = bar/bspwm
 modules-left = 
-modules-center =
-modules-right = date
+modules-center = firefox-open
+modules-right = 
+
 
 [bar/bspwm-3]
+font-0 = "ApercuMono:size=13;3"
 width = 18%
-offset-x = 41.5%
+offset-x = 80.5%
 inherit = bar/bspwm
 modules-left = 
-modules-center = menu-freq
+modules-center = date
 modules-right = 
+
 
 [module/bspwm]
 type = internal/bspwm
@@ -77,21 +78,26 @@ type = internal/bspwm
 label-focused = %name%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 1
 
 label-occupied = %name%
-label-occupied-padding = 2
+label-occupied-padding = 1
 
 label-urgent = %name%
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 label-empty = %name%
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-padding = 1
 
-; Separator in between workspaces
-; label-separator = |
+
+[module/firefox-open]
+type = custom/script
+exec = echo "Firefox"
+
+click-left = ${scripts.firefox_opener}
+
 
 [module/date]
 type = internal/date
@@ -106,31 +112,13 @@ time-alt = %H:%M
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-foreground = ${colors.foreground}
-; format-underline = #0a6cf5
 
-label = "%date% |  %time%"
+label = "%date% | %time%"
 
-[module/menu-freq]
-type = custom/menu
-expand-right = true
-
-menu-0-0 = Github
-menu-0-0-exec = firefox https://github.com && bspc desktop -f ^1
-menu-0-1 = Youtube
-menu-0-1-exec = firefox https://youtube.com && bspc desktop -f ^1
-menu-0-2 = Twitch
-menu-0-2-exec = firefox https://twitch.tv && bspc desktop -f ^1
-
-label-open = Frequented pages
-label-close = (Close this)
-label-separator = " | "
 
 [settings]
 screenchange-reload = true
 format-underline = 
 
 [global/wm]
-; margin-top = 5
 margin-bottom = 10
-
-; vim:ft=dosini
