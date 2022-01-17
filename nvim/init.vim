@@ -3,17 +3,19 @@ call plug#begin()
 Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
 Plug 'chrisbra/colorizer'
-Plug 'Kjwon15/vim-transparent'
-Plug 'frazrepo/vim-rainbow'
+" Plug 'Kjwon15/vim-transparent'
+" Plug 'frazrepo/vim-rainbow'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'preservim/nerdtree'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
 " Just normal things to use :)
 
 set termguicolors
-colorscheme dracula
+colorscheme gruvbox
+set background=light
 
 syntax on
 set nocompatible

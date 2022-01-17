@@ -20,10 +20,10 @@ firefox_opener = ~/.config/polybar/scripts/firefox_opener.sh
 
 
 [colors]
-background = #282a36
-background-alt = #333333
-foreground = #f8f8f2
-foreground-alt = #f4f99d
+background = #fbf1c7
+background-alt = #d1c1b2
+foreground = #3c3836
+foreground-alt = #7c6f64
 alert = #ff5555
 
 
@@ -40,7 +40,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 border-size = 3
-border-color = #caa9fa
+border-color = #928374
 
 font-0 = "ApercuMono:size=12;3"
 
