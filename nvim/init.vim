@@ -3,8 +3,8 @@ call plug#begin()
 Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
 Plug 'chrisbra/colorizer'
-" Plug 'Kjwon15/vim-transparent'
-" Plug 'frazrepo/vim-rainbow'
+Plug 'Kjwon15/vim-transparent'
+Plug 'frazrepo/vim-rainbow'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'preservim/nerdtree'
 Plug 'morhetz/gruvbox'
@@ -57,4 +57,4 @@ nnoremap <silent> <C-q> :NERDTreeToggle<CR>
 " For vim-rainbow
 let g:rainbow_active = 1
 
-let g:rainbow_guifgs = ['#caa9fa', '#50fa7b', '#ff6e67', '#8be9fd']
+let g:rainbow_guifgs = ['#3c3836', '#9d0006', '#d79921', '#98971a']

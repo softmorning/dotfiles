@@ -3,8 +3,8 @@
 # Autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
 xrandr --output DP-2 --mode 1920x1080 --rate 144.00 &
-picom &
-feh --bg-fill --no-fehbg ~/Pictures/wallpapers/0325.png &
+picom --detect-rounded-corners &
+feh --bg-fill --no-fehbg ~/Pictures/wallpapers/0327_wolfgang.png &
 xset s off -dpms &
 setxkbmap -option caps:escape &
 
@@ -13,6 +13,7 @@ bspc monitor DP-2 -d I II III IV V
 
 # Extra config stuff #
 bspc config border_width         4
+# bspc config border_radius        6
 bspc config window_gap          28
 bspc config split_ratio          0.6
 bspc config focus_follows_pointer true
