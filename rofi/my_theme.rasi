@@ -1,0 +1,48 @@
+* {
+    highlight: bold;
+
+    wb-bg: #32302f;
+    wb-fg: #fbf1c7;
+    wb-hl: #414141;
+    wb-bd: #8ec07c;
+
+    border-color: @wb-bd;
+    background-color: @wb-bg;
+    foreground: @wb-fg;
+
+    margin: 2;
+}
+
+window {
+    font: "Apercu Mono 12";
+    border: 4;
+    margin: 0;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: @wb-fg;
+}
+
+element.normal.normal {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element.normal.active {
+    background-color: @wb-hl;
+    text-color: inherit;
+}
+
+element.selected.normal {
+    background-color: @wb-hl;
+    text-color: inherit;
+}
+
+prompt,
+entry {
+    text-color: @wb-fg;
+}
+
+
+/* vim:ft=css

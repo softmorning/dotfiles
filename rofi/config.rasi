@@ -1,0 +1,8 @@
+configuration {
+    modi: "window,drun,ssh,file-browser";
+}
+
+/* @theme "gruvbox-light-soft" */
+@theme "my_theme"
+
+/* vim:ft=css
