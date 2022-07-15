@@ -1,0 +1,5 @@
+{
+    "rpc.detailsEditing": "{file_name} {problems}",
+    "rpc.detailsViewing": "{file_name} {problems}",
+    "rpc.lowerDetailsEditing": "Editing {file_name} | Line {current_line} of {total_lines}"
+}

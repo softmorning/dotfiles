@@ -20,11 +20,12 @@ firefox_opener = ~/.config/polybar/scripts/firefox_opener.sh
 
 
 [colors]
-background = #fbf1c7
-background-alt = #d1c1b2
-foreground = #3c3836
-foreground-alt = #7c6f64
-alert = #ff5555
+background = #32302f
+background-alt = #42403f
+foreground = #fbf1c7
+foreground-alt = #a89984
+border = #8ec07c
+alert = #ffbbbb
 
 
 [bar/bspwm]
@@ -33,14 +34,14 @@ width =  12%
 height = 30
 fixed-center = false
 bottom = false
-offset-x = 1.5%
-offset-y = 2.75%
+offset-x = 0.3%
+offset-y = 1.75%
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-size = 3
-border-color = #928374
+border-size = 4
+border-color = ${colors.border} 
 
 font-0 = "ApercuMono:size=12;3"
 
@@ -66,7 +67,7 @@ modules-right =
 [bar/bspwm-3]
 font-0 = "ApercuMono:size=13;3"
 width = 27%
-offset-x = 71.5%
+offset-x = 72.7%
 inherit = bar/bspwm
 padding = 1
 
